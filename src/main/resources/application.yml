@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: course-elearning-homework1
+  data:
+    mongodb:
+      host: localhost
+      username: admin
+      password: admin@1234
+      uri: mongodb://admin:admin%4012345@localhost:27017/hw1?authSource=admin
+      database: hw1
+      port: 27017
