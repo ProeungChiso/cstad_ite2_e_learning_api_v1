@@ -3,9 +3,29 @@ spring:
     name: course-elearning-homework1
   data:
     mongodb:
-      host: localhost
-      username: admin
-      password: admin@1234
-      uri: mongodb://admin:admin%4012345@localhost:27017/hw1?authSource=admin
+      uri: mongodb://admin:1234@localhost:27024/
       database: hw1
-      port: 27017
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+  data:
+    mongodb:
+      uri: mongodb://admin:1234@hw1:27017/
+      database: hw1

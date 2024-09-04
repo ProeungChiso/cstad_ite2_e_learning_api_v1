@@ -1,7 +1,0 @@
-spring:
-  data:
-    mongodb:
-      host: localhost
-      username: admin
-      password: admin@12345
-      uri: mongodb://admin:admin%4012345@localhost:27017/hw1
