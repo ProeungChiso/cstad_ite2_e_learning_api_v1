@@ -24,10 +24,8 @@ public class Course {
     private String contents;
     private BigDecimal price;
     private Integer discount;
-
     private List<Section> sections;
-    @DBRef
-    private Category category;
+    private String categoryName;
 
     private String code;
     private String instructorUsername;
